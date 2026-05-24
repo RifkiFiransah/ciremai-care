@@ -9,7 +9,9 @@
 // };
 
 export const VIDEO_LINKS = {
-  WELCOME_KUNINGAN: process.env.EXPO_PUBLIC_VIDEO_WELCOME_KUNINGAN,
+  // WELCOME_KUNINGAN: process.env.EXPO_PUBLIC_VIDEO_WELCOME_KUNINGAN,
+  WELCOME_KUNINGAN:
+    "https://drive.google.com/file/d/1bLFI0TrTAFRe5IZq-vFlg5B-7jcjd9_J/preview",
 };
 
 export const WONG_BAKER_SCALE = {
@@ -47,13 +49,13 @@ export const PAIN_TRIGGERS = {
     {
       id: "infection",
       label: "Infeksi",
-      description: "Sakit gigi, sakit perut, radang tenggorokan, dll",
+      description: "(Sakit gigi, sakit perut)",
       image: require("../../assets/images/edukasi/kenali/penyebab/infeksi.png"),
     },
     {
       id: "medical",
       label: "Tindakan Medis",
-      description: "Disuntik, operasi, perawatan luka, dll",
+      description: "(Disuntik atau operasi)",
       image: require("../../assets/images/edukasi/kenali/penyebab/suntik.png"),
     },
   ],
@@ -87,14 +89,6 @@ export const PAIN_TRIGGERS = {
     {
       label: "Kelelahan",
       image: require("../../assets/images/edukasi/kenali/pemicu/kelelahan.png"),
-    },
-    {
-      label: "Tekanan pada area nyeri",
-      image: null,
-    },
-    {
-      label: "Aktivitas fisik",
-      image: null,
     },
   ],
 };

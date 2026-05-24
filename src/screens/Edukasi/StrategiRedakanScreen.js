@@ -10,7 +10,7 @@ import { theme } from "../../utils/theme";
 
 const strategies = [
   {
-    image: require("../../../assets/images/edukasi/strategi/lingkungan/sejuk.png"),
+    image: require("../../../assets/images/edukasi/bijakperedanyeri/dokter.png"),
     title: "Ciptakan Lingkungan Nyaman",
     description: "Jaga suhu ruangan tetap sejuk dan nyaman untuk anak",
     details: [
@@ -25,7 +25,7 @@ const strategies = [
     ],
   },
   {
-    image: require("../../../assets/images/edukasi/strategi/kombinasi/obat-suntik.png"),
+    image: require("../../../assets/images/edukasi/kenali/icon-kenali.png"),
     title: "Kombinasi Terapi",
     description: "Gabungkan berbagai metode untuk hasil optimal",
     details: [
@@ -44,7 +44,7 @@ const strategies = [
     ],
   },
   {
-    image: require("../../../assets/images/edukasi/strategi/dukungan/ketenangan.png"),
+    image: require("../../../assets/images/edukasi/redakannyeri/icon-redakannyeri.png"),
     title: "Dukungan Emosional",
     description: "Berikan ketenangan dan dampingan penuh",
     details: [

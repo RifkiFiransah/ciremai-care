@@ -125,8 +125,7 @@ export function WongBakerScale({
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: theme.spacing.marginMobile,
-    paddingVertical: theme.spacing.lg,
+    paddingVertical: "0px",
   },
   title: {
     fontSize: theme.typography.headlineMd.fontSize,
@@ -158,9 +157,10 @@ const styles = StyleSheet.create({
   },
   faceButton: {
     alignItems: "center",
-    padding: theme.spacing.sm,
+    padding: theme.spacing.xs,
+    marginHorizontal: theme.spacing.xs,
     borderRadius: theme.rounded.lg,
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: theme.colors.outlineVariant,
     backgroundColor: theme.colors.surfaceContainerLowest,
   },

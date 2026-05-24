@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
     borderRadius: theme.rounded.lg,
     padding: theme.spacing.md,
     alignItems: "center",
-    marginTop: theme.spacing.md,
+    marginTop: theme.spacing.sm,
   },
   infoIconImage: {
     width: 40,
@@ -220,6 +220,6 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
   buttonContainer: {
-    marginTop: theme.spacing.xl,
+    marginTop: theme.spacing.md,
   },
 });

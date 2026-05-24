@@ -3,32 +3,43 @@
  * Menggunakan React Navigation untuk manajemen navigation
  */
 
+import "react-native-gesture-handler";
+import { useEffect, useCallback } from "react";
 import { ActivityIndicator, Text, View } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import * as SplashScreen from "expo-splash-screen";
+import { useFonts } from "expo-font";
+import { Inter_400Regular, Inter_600SemiBold } from "@expo-google-fonts/inter";
+import { Manrope_600SemiBold, Manrope_700Bold, Manrope_800ExtraBold } from "@expo-google-fonts/manrope";
 import { useDatabase } from "./src/hooks/useDatabase";
 import { AppNavigator } from "./src/navigation/AppNavigator";
 import { theme } from "./src/utils/theme";
 
-export default function App() {
-  const { isReady, error } = useDatabase();
+// Keep the splash screen visible while we fetch resources
+SplashScreen.preventAutoHideAsync();
 
-  if (!isReady) {
-    return (
-      <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: theme.colors.background,
-        }}
-      >
-        <ActivityIndicator size="large" color={theme.colors.primary} />
-      </View>
-    );
+export default function App() {
+  const { isReady: isDbReady, error: dbError } = useDatabase();
+  
+  const [fontsLoaded, fontError] = useFonts({
+    Inter: Inter_400Regular,
+    Manrope: Manrope_600SemiBold,
+  });
+
+  const onLayoutRootView = useCallback(async () => {
+    if ((isDbReady && fontsLoaded) || dbError || fontError) {
+      await SplashScreen.hideAsync();
+    }
+  }, [isDbReady, fontsLoaded, dbError, fontError]);
+
+  if (!isDbReady || !fontsLoaded) {
+    return null; // Return null to keep splash screen visible
   }
 
-  if (error) {
+  if (dbError || fontError) {
     return (
       <View
+        onLayout={onLayoutRootView}
         style={{
           flex: 1,
           justifyContent: "center",
@@ -38,13 +49,17 @@ export default function App() {
         }}
       >
         <Text style={{ color: theme.colors.error, textAlign: "center" }}>
-          Terjadi kesalahan saat menginisialisasi database:
+          Terjadi kesalahan saat inisialisasi:
           {"\n"}
-          {error.message}
+          {dbError ? dbError.message : fontError?.message}
         </Text>
       </View>
     );
   }
 
-  return <AppNavigator />;
+  return (
+    <SafeAreaProvider onLayout={onLayoutRootView}>
+      <AppNavigator />
+    </SafeAreaProvider>
+  );
 }

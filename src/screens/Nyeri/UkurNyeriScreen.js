@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.surfaceContainer,
     borderRadius: theme.rounded.lg,
     padding: theme.spacing.md,
-    marginVertical: theme.spacing.lg,
+    marginTop: theme.spacing.md,
   },
   infoTitle: {
     fontSize: theme.typography.labelMd.fontSize,
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.primaryContainer,
     borderRadius: theme.rounded.lg,
     padding: theme.spacing.md,
-    marginVertical: theme.spacing.lg,
+    marginTop: theme.spacing.md,
   },
   resultTitle: {
     fontSize: theme.typography.headlineMd.fontSize,

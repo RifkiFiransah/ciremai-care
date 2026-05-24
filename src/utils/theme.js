@@ -97,6 +97,7 @@ export const theme = {
     md: 16,
     lg: 24,
     xl: 40,
+    xxl: 60,
     gutter: 16,
     marginMobile: 20,
     marginDesktop: 64,

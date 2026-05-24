@@ -29,7 +29,8 @@ export function Footer() {
 
 const styles = StyleSheet.create({
   footer: {
-    paddingVertical: theme.spacing.md,
+    paddingTop: theme.spacing.md,
+    paddingBottom: theme.spacing.xxl,
     paddingHorizontal: theme.spacing.marginMobile,
     borderTopWidth: 1,
     borderTopColor: theme.colors.outlineVariant,

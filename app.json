@@ -8,16 +8,15 @@
     "scheme": "ciremaicare",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/images/icon.png"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "backgroundColor": "#ffffff",
+        "foregroundImage": "./assets/images/icon.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.firansah.ciremaicare"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
@@ -33,10 +32,14 @@
           }
         }
       ],
-      "expo-sqlite"
+      "expo-font",
+      "expo-web-browser"
     ],
-    "experiments": {
-      "reactCompiler": true
+    "experiments": {},
+    "extra": {
+      "eas": {
+        "projectId": "0c9f9bf3-a5da-423a-9238-640c1747edee"
+      }
     }
   }
 }

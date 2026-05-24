@@ -26,7 +26,7 @@ echo ""
 
 # Install dependencies
 echo "📦 Installing dependencies..."
-npm install
+npm install --legacy-peer-deps
 echo "✓ Dependencies installed"
 echo ""
 

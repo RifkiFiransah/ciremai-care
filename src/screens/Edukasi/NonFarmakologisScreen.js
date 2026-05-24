@@ -10,7 +10,7 @@ import { theme } from "../../utils/theme";
 
 const methods = [
   {
-    image: require("../../../assets/images/edukasi/redakannyeri/distraksi/nonton.png"),
+    image: require("../../../assets/images/edukasi/redakannyeri/icon-redakannyeri.png"),
     title: "Teknik Distraksi (Pengalihan)",
     description: "Alihkan perhatian anak dari nyeri",
     activities: [
@@ -29,7 +29,7 @@ const methods = [
     ],
   },
   {
-    image: require("../../../assets/images/edukasi/relaksasi/tarik-napas.png"),
+    image: require("../../../assets/images/edukasi/bijakperedanyeri/efek-samping.png"),
     title: "Relaksasi Napas Dalam",
     description: "Ajarkan teknik pernapasan untuk menenangkan",
     steps: [
@@ -46,7 +46,7 @@ const methods = [
     ],
   },
   {
-    image: require("../../../assets/images/edukasi/redakannyeri/kompres/kompres-dingin.png"),
+    image: require("../../../assets/images/edukasi/kenali/pemicu/suhu.png"),
     title: "Kompres",
     description: "Gunakan kompres untuk meredakan nyeri lokal",
     types: [
@@ -68,7 +68,7 @@ export default function NonFarmakologisScreen() {
     <View style={styles.container}>
       <Header
         title="Redakan Nyeri Tanpa Obat"
-        subtitle="Teknik Non-Farmakologis"
+        subtitle="Cara Redakan Nyeri Tanpa Obat (Non-Farmakologis)"
         showInstitution={false}
       />
 
