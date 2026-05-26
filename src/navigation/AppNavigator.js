@@ -17,6 +17,7 @@ import SearchScreen from "../screens/SearchScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import CatatPolaScreen from "../screens/Nyeri/CatatPolaScreen";
 import UkurNyeriScreen from "../screens/Nyeri/UkurNyeriScreen";
+import RiwayatNyeriScreen from "../screens/Nyeri/RiwayatNyeriScreen";
 import VideoScreen from "../screens/Video/VideoScreen";
 
 // Import Profile Sub-Screens
@@ -191,6 +192,14 @@ export function AppNavigator() {
           component={CatatPolaScreen}
           options={{
             title: "Catat Pola Nyeri",
+          }}
+        />
+
+        <Stack.Screen
+          name="RiwayatNyeri"
+          component={RiwayatNyeriScreen}
+          options={{
+            title: "Riwayat Nyeri",
           }}
         />
 
