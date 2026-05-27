@@ -109,7 +109,6 @@ export default function CatatPolaScreen({ route, navigation }) {
 
       // Gunakan URL dari .env jika ada, atau gunakan URL placeholder (GANTI URL INI)
       const URL_SCRIPT = process.env.EXPO_PUBLIC_GOOGLE_SCRIPT_URL || "";
-
       try {
         await fetch(URL_SCRIPT, {
           method: "POST",
