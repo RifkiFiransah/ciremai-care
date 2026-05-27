@@ -8,13 +8,40 @@ import { getDatabase } from "./db";
 /**
  * Menambahkan record nyeri baru ke database
  */
-export async function addPainLog(wongBakerScale, waktuMuncul, lokasi, pemicu) {
+export async function addPainLog(
+  wongBakerScale,
+  waktuMuncul,
+  lokasi,
+  pemicu,
+  namaAnak,
+  usia,
+  jenisKelamin,
+  pengalamanDirawat,
+  tindakanInvasif,
+  waktuPengukuran,
+  keteranganSkalaNyeri
+) {
   try {
     const database = await getDatabase();
     const result = await database.runAsync(
-      `INSERT INTO pain_logs (wong_baker_scale, waktu_muncul, lokasi_nyeri, pemicu_peredan)
-       VALUES (?, ?, ?, ?);`,
-      [wongBakerScale, waktuMuncul, lokasi, pemicu],
+      `INSERT INTO pain_logs (
+        wong_baker_scale, waktu_muncul, lokasi_nyeri, pemicu_peredan,
+        nama_anak, usia, jenis_kelamin, pengalaman_dirawat, tindakan_invasif,
+        waktu_pengukuran, keterangan_skala_nyeri
+       ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`,
+      [
+        wongBakerScale,
+        waktuMuncul,
+        lokasi,
+        pemicu,
+        namaAnak || "",
+        usia || "",
+        jenisKelamin || "",
+        pengalamanDirawat || "",
+        tindakanInvasif || "",
+        waktuPengukuran || "",
+        keteranganSkalaNyeri || ""
+      ],
     );
     console.log("✓ Pain log berhasil ditambahkan:", result);
     return result;
@@ -73,14 +100,36 @@ export async function updatePainLog(
   waktuMuncul,
   lokasi,
   pemicu,
+  namaAnak,
+  usia,
+  jenisKelamin,
+  pengalamanDirawat,
+  tindakanInvasif,
+  waktuPengukuran,
+  keteranganSkalaNyeri
 ) {
   try {
     const database = await getDatabase();
     const result = await database.runAsync(
       `UPDATE pain_logs
-       SET wong_baker_scale = ?, waktu_muncul = ?, lokasi_nyeri = ?, pemicu_peredan = ?
+       SET wong_baker_scale = ?, waktu_muncul = ?, lokasi_nyeri = ?, pemicu_peredan = ?,
+           nama_anak = ?, usia = ?, jenis_kelamin = ?, pengalaman_dirawat = ?, tindakan_invasif = ?,
+           waktu_pengukuran = ?, keterangan_skala_nyeri = ?
        WHERE id = ?;`,
-      [wongBakerScale, waktuMuncul, lokasi, pemicu, id],
+      [
+        wongBakerScale,
+        waktuMuncul,
+        lokasi,
+        pemicu,
+        namaAnak || "",
+        usia || "",
+        jenisKelamin || "",
+        pengalamanDirawat || "",
+        tindakanInvasif || "",
+        waktuPengukuran || "",
+        keteranganSkalaNyeri || "",
+        id
+      ],
     );
     console.log("✓ Pain log berhasil diperbarui");
     return result;

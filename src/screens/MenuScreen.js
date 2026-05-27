@@ -38,13 +38,20 @@ export default function MenuScreen({ navigation }) {
       icon: "chart-bar",
       route: "UkurNyeri",
     },
-    // {
-    //   id: "catat",
-    //   title: "Catat Pola Nyeri",
-    //   description: "Simpan riwayat nyeri untuk dipantau dokter",
-    //   icon: "notebook-edit",
-    //   route: "CatatPola",
-    // },
+    {
+      id: "catat",
+      title: "Catat Pola Nyeri",
+      description: "Simpan riwayat nyeri untuk dipantau dokter",
+      icon: "notebook-edit",
+      route: "CatatPola",
+    },
+    {
+      id: "riwayat",
+      title: "Riwayat Nyeri",
+      description: "Lihat daftar riwayat pencatatan nyeri Anda",
+      icon: "history",
+      route: "RiwayatNyeri",
+    },
   ];
 
   return (

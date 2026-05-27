@@ -185,7 +185,7 @@ export default function SearchScreen({ navigation }) {
                 { fontFamily: theme.typography.bodyLg.fontFamily },
               ]}
             >
-              Tidak ada hasil yang ditemukan untuk "{searchQuery}"
+              Tidak ada hasil yang ditemukan untuk &quot;{searchQuery}&quot;
             </Text>
           </View>
         )}
