@@ -1,56 +1,58 @@
-# Welcome to your Expo app 👋
+# Ciremai Care 🩺
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Ciremai Care** adalah aplikasi mobile berbasis React Native (Expo) yang dikembangkan untuk memantau, mencatat, dan mengelola tingkat nyeri pasien anak, serta memberikan edukasi terkait penanganan nyeri non-farmakologis. Aplikasi ini dipersembahkan untuk **Universitas Bhakti Husada Indonesia**.
 
-## Get started
+## 🚀 Fitur Utama
 
-1. Install dependencies
+- **Pengukuran Nyeri**: Menggunakan skala Wong-Baker (Face Pain Scale) interaktif (0-10, angka genap).
+- **Pencatatan Nyeri (Local Database)**: Pencatatan rekam medis tingkat nyeri menggunakan SQLite.
+- **Modul Edukasi**: Edukasi mengenai penyebab, pemicu, periode nyeri, serta strategi meredakan nyeri tanpa obat.
+- **Integrasi Video Berbasis Cloud**: Penayangan video edukasi menggunakan WebView dari instans Google Drive.
+- **Sistem Peringatan (Guardrails)**: Jika sistem identifikasi mencatat peningkatan/penetrasi tingkat nyeri berbahaya, peringatan interaktif memberitahu pasien/pengguna agar segera menginformasikan kepada pihak rumah sakit.
+
+## 🛠 Teknologi
+
+- **Framework**: [React Native](https://reactnative.dev/) / [Expo](https://expo.dev/)
+- **Navigasi**: [React Navigation](https://reactnavigation.org/)
+- **Database**: [Expo SQLite](https://docs.expo.dev/versions/latest/sdk/sqlite/)
+- **UI & Komponen**: Tema Desain Kustom (Design Tokens), dengan komponen mandiri yang re-usable.
+
+## 📁 Struktur Pengerjaan Ciremai Care
+
+```text
+src/
+├── assets/       # Gambar, icon, dan aset proyek lainnya
+├── components/   # Komponen UI utama (CustomButton, WongBakerScale, Header, Footer)
+├── context/      # Konteks Global aplikasi (State management)
+├── database/     # Skema SQLite & fungsi CRUD layer
+├── hooks/        # Custom React hooks utama seperti useDatabase
+├── navigation/   # Konfigurasi Native Stack navigator
+├── screens/      # Halaman aplikasi dengan modul-modul terspesifikasinya (Edukasi, Nyeri, dll)
+└── utils/        # Logika pembantu (constants.js & theme.js)
+```
+
+## ⚙️ Persyaratan Lingkungan Pengembangan
+
+- **Node.js**: LTS versi terbaru direkomendasikan.
+- **Expo CLI** `(npx expo)`.
+- **Aplikasi Expo Go** di ponsel cerdas Anda atau setup lokal dengan **Android Simulator**.
+
+## 🏃‍♂️ Menjalankan Aplikasi
+
+1. **Unduh Repositori Project ini** melalui akses Anda.
+
+2. **Instal seluruh Dependensi**:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Jalankan Aplikasi via Expo**:
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+4. **Uji Coba di Perangkat**:
+   - Buka **Expo Go** pada Smartphone fisik Anda, dan pastikan WiFi menggunakan network seluler (bridging) yang sama. Silakan pindai QRCode yang muncul.
+   - Atau tekan `a` di terminal bar jika ada peramban Android Studio (emulator) yang sedang jalan di mesin lokal Anda.
