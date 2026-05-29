@@ -17,20 +17,6 @@
 - **Database**: [Expo SQLite](https://docs.expo.dev/versions/latest/sdk/sqlite/)
 - **UI & Komponen**: Tema Desain Kustom (Design Tokens), dengan komponen mandiri yang re-usable.
 
-## 📁 Struktur Pengerjaan Ciremai Care
-
-```text
-src/
-├── assets/       # Gambar, icon, dan aset proyek lainnya
-├── components/   # Komponen UI utama (CustomButton, WongBakerScale, Header, Footer)
-├── context/      # Konteks Global aplikasi (State management)
-├── database/     # Skema SQLite & fungsi CRUD layer
-├── hooks/        # Custom React hooks utama seperti useDatabase
-├── navigation/   # Konfigurasi Native Stack navigator
-├── screens/      # Halaman aplikasi dengan modul-modul terspesifikasinya (Edukasi, Nyeri, dll)
-└── utils/        # Logika pembantu (constants.js & theme.js)
-```
-
 ## ⚙️ Persyaratan Lingkungan Pengembangan
 
 - **Node.js**: LTS versi terbaru direkomendasikan.
