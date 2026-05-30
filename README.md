@@ -1,6 +1,6 @@
 # Ciremai Care 🩺
 
-**Ciremai Care** adalah aplikasi mobile berbasis React Native (Expo) yang dikembangkan untuk memantau, mencatat, dan mengelola tingkat nyeri pasien anak, serta memberikan edukasi terkait penanganan nyeri non-farmakologis. Aplikasi ini dipersembahkan untuk **Universitas Bhakti Husada Indonesia**.
+**Ciremai Care** adalah aplikasi mobile berbasis React Native (Expo) yang dikembangkan untuk memantau, mencatat, dan mengelola tingkat nyeri pasien anak, serta memberikan edukasi terkait penanganan nyeri non-farmakologis.
 
 ## 🚀 Fitur Utama
 
