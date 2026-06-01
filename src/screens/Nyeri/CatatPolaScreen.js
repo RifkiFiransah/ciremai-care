@@ -299,6 +299,71 @@ export default function CatatPolaScreen({ route, navigation }) {
 
           <View style={styles.divider} />
 
+          <View style={styles.headerContainer}>
+            <Image
+              source={require("../../../assets/images/edukasi/pantaunyeri/wong-baker.png")}
+              style={styles.wongBakerImage}
+              resizeMode="contain"
+            />
+          </View>
+          <View style={styles.textContainer}>
+            <Text style={styles.sectionTitle}>Skala Wajah Wong-Baker</Text>
+
+            <View style={styles.detailsContainer}>
+              <Text
+                style={[
+                  styles.itemText,
+                  { fontFamily: theme.typography.bodyMd.fontFamily },
+                ]}
+              >
+                <Text style={styles.bullet}>•</Text> Wajah 0: tidak ada rasa
+                nyeri.
+              </Text>
+              <Text
+                style={[
+                  styles.itemText,
+                  { fontFamily: theme.typography.bodyMd.fontFamily },
+                ]}
+              >
+                <Text style={styles.bullet}>•</Text> Wajah 2: nyeri ringan.
+              </Text>
+              <Text
+                style={[
+                  styles.itemText,
+                  { fontFamily: theme.typography.bodyMd.fontFamily },
+                ]}
+              >
+                <Text style={styles.bullet}>•</Text> Wajah 4: nyeri sedikit
+                mengganggu.
+              </Text>
+              <Text
+                style={[
+                  styles.itemText,
+                  { fontFamily: theme.typography.bodyMd.fontFamily },
+                ]}
+              >
+                <Text style={styles.bullet}>•</Text> Wajah 6: nyeri sedang.
+              </Text>
+              <Text
+                style={[
+                  styles.itemText,
+                  { fontFamily: theme.typography.bodyMd.fontFamily },
+                ]}
+              >
+                <Text style={styles.bullet}>•</Text> Wajah 8: nyeri berat.
+              </Text>
+              <Text
+                style={[
+                  styles.itemText,
+                  { fontFamily: theme.typography.bodyMd.fontFamily },
+                ]}
+              >
+                <Text style={styles.bullet}>•</Text> Wajah 10: nyeri sangat
+                berat.
+              </Text>
+            </View>
+          </View>
+
           {/* Section: Data Nyeri */}
           <Text style={styles.sectionTitle}>Data Nyeri</Text>
 
@@ -468,7 +533,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: theme.colors.primary,
     marginBottom: theme.spacing.md,
-    marginTop: theme.spacing.sm,
   },
   divider: {
     height: 1,
@@ -547,5 +611,44 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     marginVertical: theme.spacing.lg,
+  },
+
+  headerContainer: {
+    alignItems: "center",
+    marginBottom: theme.spacing.md,
+    paddingVertical: theme.spacing.md,
+  },
+  wongBakerImage: {
+    width: "100%",
+    height: 100,
+  },
+  textContainer: {
+    paddingTop: theme.spacing.sm,
+  },
+  title: {
+    fontSize: theme.typography.headlineMd.fontSize,
+    fontWeight: theme.typography.headlineMd.fontWeight,
+    color: theme.colors.primary,
+    marginBottom: theme.spacing.xs,
+  },
+  description: {
+    fontSize: theme.typography.bodyMd.fontSize,
+    color: theme.colors.onSurface,
+    lineHeight: 22,
+  },
+  detailsContainer: {
+    marginBottom: theme.spacing.md,
+    // paddingTop: theme.spacing.sm,
+  },
+  itemText: {
+    fontSize: theme.typography.bodyMd.fontSize,
+    color: theme.colors.onSurfaceVariant,
+    lineHeight: 22,
+    marginBottom: theme.spacing.sm,
+  },
+  bullet: {
+    fontSize: 16,
+    color: theme.colors.primary,
+    fontWeight: "bold",
   },
 });
